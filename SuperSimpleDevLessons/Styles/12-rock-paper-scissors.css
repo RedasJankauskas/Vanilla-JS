@@ -1,0 +1,42 @@
+body{
+  background-color: black;
+  font-family: Arial;
+  color: white;
+}
+.gameTitle{
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+.fotke-container{
+  background-color: black;
+  padding: 30px 35px;
+  border-radius: 100px;
+  border: solid;
+  border-color: white;
+  align-items: center;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.fotke{
+  height: 50px;
+}
+.js-result{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.js-moves{
+  margin-bottom: 40px;
+}
+.resetButton,
+.auto-play-button{
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+

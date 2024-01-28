@@ -1,86 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Styles/9j.css"> 
+    <script src="Scripts/9j.js"></script>
+  </head>
   <body>
-    <!-- Code changes are at the bottom. -->
+    <p class="calculationDisplay"></p>
     <p>
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('1');
         displayCalculation();
       ">1</button>
 
-      <button onclick="
+      <button class="number" onclick="
         updateCalculation('2');
         displayCalculation();
       ">2</button>
 
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('3');
         displayCalculation();
       ">3</button>
 
-      <button onclick="
+      <button class="sign"
+      onclick="
         updateCalculation(' + ');
         displayCalculation();
       ">+</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('4');
         displayCalculation();
       ">4</button>
 
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('5');
         displayCalculation();
       ">5</button>
 
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('6');
         displayCalculation();
       ">6</button>
 
-      <button onclick="
+      <button class="sign"
+      onclick="
         updateCalculation(' - ');
         displayCalculation();
       ">-</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('7');
         displayCalculation();
       ">7</button>
 
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('8');
         displayCalculation();
       ">8</button>
 
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('9');
         displayCalculation();
       ">9</button>
 
-      <button onclick="
+      <button class="sign"
+      onclick="
         updateCalculation(' * ');
         displayCalculation();
       ">*</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('0');
         displayCalculation();
       ">0</button>
 
-      <button onclick="
+      <button class="number"
+      onclick="
         updateCalculation('.');
         displayCalculation();
       ">.</button>
 
-      <button onclick="
+      <button class="number"
+      onclick="
         // Note: eval() takes a string and runs it as code.
         // Avoid using eval() in real world projects since
         // it can potentially be given harmful code to run.
@@ -93,14 +111,16 @@
         localStorage.setItem('calculation', calculation);
       ">=</button>
 
-      <button onclick="
+      <button class="sign"
+      onclick="
         updateCalculation(' / ');
         displayCalculation();
       ">/</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="number clear-button"
+      onclick="
         calculation = '';
         displayCalculation(calculation);
         // Remember to save the calculation here.
@@ -108,29 +128,5 @@
       ">Clear</button>
     </p>
 
-    <p class="calculationDisplay"></p>
-
-    <script>
-      let calculation = localStorage.getItem('calculation') || '';
-
-      displayCalculation();
-
-      function displayCalculation(){
-        let skaiciavimas=localStorage.getItem('calculation');
-        document.querySelector('.calculationDisplay').innerHTML=skaiciavimas;
-      }
-
-      function updateCalculation(value) {
-        calculation += value;
-        console.log(calculation);
-        localStorage.setItem('calculation', calculation);
-      }
-
-      // Optional: you can also create a function in order
-      // to reuse this code.
-      function saveCalculation() {
-        localStorage.setItem('calculation', calculation);
-      }
-    </script>
   </body>
 </html>
